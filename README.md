@@ -9,8 +9,8 @@ Operacje możliwe do wykonania na szablonie vector:
 6) usuwa vector
 
 
+Obowiązkową metodą jest punkt nr 2, w którym alokujemy pamięć dla vectora oraz punkt nr 8 w którym czyścimy pamięć vectora, która została przydzielona dynamicznie).
 Przykład użycia:
-(Obowiązkową metodą jest punkt nr 2, w którym alokujemy pamięć dla vectora oraz punkt nr 8 w którym czyścimy pamięć vectora, która została przydzielona dynamicznie).
 
 1. Utworzenie nowej zmiennej typu Vector:
 
