@@ -3,10 +3,10 @@ Moja własna interpretacja szablonu vector z języka C++ napisana w języku C. N
 Operacje możliwe do wykonania na szablonie vector:
 1) dodanie nowego elementu na koniec vectora
 2) usunięcie ostatniego elementu vectora
-3) wyświetla wszystkie elementy vectora
-4) zwraca rozmiar vectora
-5) sortuje vector
-6) usuwa vector
+3) wyświetlenie wszystkich elementów vectora
+4) zwrócenie rozmiaru vectora
+5) posortowanie vectora
+6) usunięcie vectora
 
 
 Obowiązkową metodą jest punkt nr 2, w którym alokujemy pamięć dla vectora oraz punkt nr 8 w którym czyścimy pamięć vectora, która została przydzielona dynamicznie).
