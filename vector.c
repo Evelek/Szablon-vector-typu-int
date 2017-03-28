@@ -18,7 +18,7 @@ void dodaj_element(struct vector *wsk, const int wartosc) {
 
 void usun_element(struct vector *wsk) {
 	wsk->tab[vector_rozmiar - 3] = 0;
-	wsk->tab = realloc(wsk->tab, (vector_rozmiar - 1) * sizeof(int));
+	free(wsk->tab[vector_rozmiar - 3]);
 	vector_rozmiar--;
 }
 
