@@ -1,12 +1,12 @@
 # Szablon-vector-typu-int
 Moja własna interpretacja szablonu vector z języka C++ napisana w języku C. Na chwilę obecną obsługuje on tylko typ int.
 Operacje możliwe do wykonania na szablonie vector:
--dodanie nowego elementu na koniec vectora
--usunięcie ostatniego elementu vectora
--wyświetla wszystkie elementy vectora
--zwraca rozmiar vectora
--sortuje vector
--usuwa vector
+1) dodanie nowego elementu na koniec vectora
+2) usunięcie ostatniego elementu vectora
+3) wyświetla wszystkie elementy vectora
+4) zwraca rozmiar vectora
+5) sortuje vector
+6) usuwa vector
 
 Przykład użycia:
 (Obowiązkową metodą jest punkt nr 2, w którym alokujemy pamięć dla vectora oraz punkt nr 8 w którym czyścimy pamięć vectora, która została przydzielona dynamicznie).
