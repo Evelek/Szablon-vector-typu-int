@@ -34,30 +34,10 @@ void wyczysc_vector(struct vector *wsk) {
 }
 
 void sortuj(struct vector *wsk) {
-	int lewy = 0;
-	int prawy = wsk->rozmiar-1;
-	if (prawy <= lewy) return;
-	int i = lewy - 1, j = prawy + 1,
-		pivot = wsk->tab[(lewy + prawy) / 2];
-	while (1)
-	{
-		while (pivot>wsk->tab[++i]);
-		while (pivot<wsk->tab[--j]);
-		if (i <= j) {
-			int temp = wsk->tab[i];
-			wsk->tab[i] = wsk->tab[j];
-			wsk->tab[j] = temp;
-		}
-		else
-			break;
-	}
-	if (j > lewy)
-		sortuj_2(wsk, lewy, j);
-	if (i < prawy)
-		sortuj_2(wsk, i, prawy);
+	sortuj_algorytm(wsk, 0, wsk->rozmiar-1);
 }
 
-void sortuj_2(struct vector *wsk, int lewy, int prawy) {
+void sortuj_algorytm(struct vector *wsk, int lewy, int prawy) {
 	if (prawy <= lewy) return;
 	int i = lewy - 1, j = prawy + 1,
 		pivot = wsk->tab[(lewy + prawy) / 2];
@@ -74,7 +54,7 @@ void sortuj_2(struct vector *wsk, int lewy, int prawy) {
 			break;
 	}
 	if (j > lewy)
-		sortuj_2(wsk, lewy, j);
+		sortuj_algorytm(wsk, lewy, j);
 	if (i < prawy)
-		sortuj_2(wsk, i, prawy);
+		sortuj_algorytm(wsk, i, prawy);
 }
