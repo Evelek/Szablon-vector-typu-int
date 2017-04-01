@@ -1,5 +1,5 @@
 # Szablon-vector-typu-int
-Moja własna interpretacja szablonu vector z języka C++ napisana w języku C. Na chwilę obecną obsługuje on tylko typ int.
+Moja własna interpretacja szablonu vector z języka C++ napisana w języku C obsługująca typ int.
 Operacje możliwe do wykonania na szablonie vector:
 1) dodanie nowego elementu na koniec vectora
 2) usunięcie ostatniego elementu vectora
