@@ -20,7 +20,7 @@ void usun_element(struct vector *wsk) {
 }
 
 void wyswietl_vector(const struct vector *wsk) {
-	for (int i = 0; i < wsk->rozmiar; ++i)
+	for (size_t i = 0; i < wsk->rozmiar; ++i)
 		printf("%d ", wsk->tab[i]);
 }
 
