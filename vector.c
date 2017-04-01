@@ -16,7 +16,6 @@ void dodaj_element(struct vector *wsk, const int wartosc) {
 void usun_element(struct vector *wsk) {
 	wsk->tab[wsk->rozmiar-1] = 0;
 	free(wsk->tab[(wsk->rozmiar)-1]);
-	//free(wsk->tab[vector_rozmiar - 3]);
 	wsk->rozmiar--;
 }
 
