@@ -3,6 +3,7 @@
 
 typedef struct vector {
 	int *tab;
+	size_t rozmiar;
 } Vector;
 
 //funkcja alokuje pamiec dla jednego elementu
@@ -20,11 +21,11 @@ void wyswietl_vector(const struct vector *wsk);
 //zwraca rozmiar vectora
 size_t zwroc_rozmiar(const struct vector *wsk);
 
+//funkcja czysci pamiec vectora, vector jest usuwany
+void wyczysc_vector(struct vector *wsk);
+
 //sortuje vector
 void sortuj_2(struct vector *wsk, int lewy, int prawy);
 void sortuj(struct vector *wsk);
-
-//funkcja czysci pamiec vectora, vector jest usuwany
-void wyczysc_vector(struct vector *wsk);
 
 #endif // !VECTOR_H_
