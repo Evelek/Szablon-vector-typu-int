@@ -1,6 +1,5 @@
 #ifndef VECTOR_H_
 #define VECTOR_H_
-#include <stdbool.h>
 
 typedef struct vector {
 	int *tab;
