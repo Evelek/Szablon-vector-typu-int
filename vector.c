@@ -14,9 +14,16 @@ void dodaj_element(struct vector *wsk, const int wartosc) {
 }
 
 void usun_element(struct vector *wsk) {
-	wsk->tab[wsk->rozmiar-1] = 0;
-	free(wsk->tab[(wsk->rozmiar)-1]);
+	wsk->tab[wsk->rozmiar-1] = 0; //przypisanie ostatniemu elementowi liczby 0
 	wsk->rozmiar--;
+	int *tablica_tymczasowa = (int*)malloc(wsk->rozmiar * sizeof(int)); //utworzenie tymczasowej tablicy dynamicznej
+	for (size_t i = 0; i < wsk->rozmiar; ++i)
+		tablica_tymczasowa[i] = wsk->tab[i]; //skopiowanie wartosci z glownej tablicy do tymczasowej bez ostatniego elementu
+	free(wsk->tab); //dealokacja pamieci glownej tablicy
+	wsk->tab = (int*)malloc(wsk->rozmiar * sizeof(int)); //alokacja pamieci dla nowej pomniejszonej glownej tablicy 
+	for (size_t i = 0; i < wsk->rozmiar; ++i)
+		wsk->tab[i] = tablica_tymczasowa[i]; //skopiowanie wartosci z tablicy tymczasowej do glownej 
+	free(tablica_tymczasowa); //dealokacja pamieci tablicy tymczasowej
 }
 
 void wyswietl_vector(const struct vector *wsk) {
